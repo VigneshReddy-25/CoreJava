@@ -1,12 +1,19 @@
 package threads;
 
-public class ThreadDemo extends Thread {
+class MyThread extends Thread {  
+    public void run() {  
+    	System.out.println("Thread is running...");  
+    }  
+}  
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		Thread t1 =new Thread();
-		
+public class ThreadDemo {
+
+	public static void main(String args[]) {
+		MyThread t1 = new MyThread();
+		t1.start();
 	}
 
 }
+
+
